@@ -1,26 +1,9 @@
-/* Public contact address. Change it here only. */
-var SITE_EMAIL = "tolubabs4@outlook.com";
+/* YouTube channel. Tolu has not started it yet. Change the URL here only. */
+var SITE_YOUTUBE = "https://www.youtube.com/@thbabs_yt";
 
 (function () {
-  var mailto = "mailto:" + SITE_EMAIL;
-  var nodes = document.querySelectorAll("[data-email]");
-  for (var i = 0; i < nodes.length; i++) {
-    var node = nodes[i];
-    if (node.tagName === "A") {
-      node.setAttribute("href", mailto);
-      if (node.getAttribute("data-email") === "address") {
-        node.textContent = SITE_EMAIL;
-      }
-    }
-  }
-
-  var data = document.querySelector('script[type="application/ld+json"]');
-  if (!data) return;
-  try {
-    var person = JSON.parse(data.textContent);
-    person.email = SITE_EMAIL;
-    data.textContent = JSON.stringify(person);
-  } catch (error) {
-    /* Leave the structured data as written if it cannot be parsed. */
+  var links = document.querySelectorAll("[data-youtube]");
+  for (var i = 0; i < links.length; i++) {
+    links[i].setAttribute("href", SITE_YOUTUBE);
   }
 })();

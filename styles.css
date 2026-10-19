@@ -36,6 +36,14 @@
   color-scheme: light;
 }
 
+@font-face {
+  font-family: "Caveat";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("/fonts/caveat-700.woff2") format("woff2");
+}
+
 *,
 *::before,
 *::after {
@@ -43,7 +51,7 @@
 }
 
 html {
-  scroll-padding-top: 4.5rem;
+  scroll-padding-top: 5.5rem;
 }
 
 body {
@@ -106,10 +114,12 @@ a:hover {
 }
 
 .brand {
+  font-family: "Caveat", "Segoe UI", cursive;
   font-weight: 700;
-  letter-spacing: -0.03em;
+  letter-spacing: 0.01em;
   text-decoration: none;
-  font-size: 1.2rem;
+  font-size: 2.15rem;
+  line-height: 1;
   color: var(--fg);
 }
 
@@ -130,9 +140,12 @@ nav ul {
 }
 
 nav a {
+  font-family: "Caveat", "Segoe UI", cursive;
+  font-weight: 700;
   text-decoration: none;
-  color: var(--muted);
-  font-size: 0.98rem;
+  color: var(--fg);
+  font-size: 1.55rem;
+  line-height: 1;
 }
 
 nav a[aria-current="page"] {
@@ -296,8 +309,64 @@ h2 {
   height: 1.35rem;
 }
 
-:root[data-theme="dark"] .icon-x {
+:root[data-theme="dark"] .icon-x,
+:root[data-theme="dark"] .icon-github {
   filter: invert(1);
+}
+
+.product:has(.logo-wordmark) {
+  grid-template-columns: 11rem 1fr;
+}
+
+.logo.logo-wordmark {
+  width: 11rem;
+  height: 2.75rem;
+  object-fit: contain;
+  padding: 0.35rem 0.45rem;
+}
+
+.stack-panel {
+  margin-top: 1.75rem;
+  border-top: 1px solid var(--line);
+}
+
+.stack-panel summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.9rem 0;
+  cursor: pointer;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  font-size: 0.78rem;
+  color: var(--muted);
+  list-style: none;
+}
+
+.stack-panel summary::-webkit-details-marker {
+  display: none;
+}
+
+.stack-panel summary::after {
+  content: "";
+  width: 0.45rem;
+  height: 0.45rem;
+  border-right: 2px solid var(--fg);
+  border-bottom: 2px solid var(--fg);
+  transform: rotate(45deg);
+  margin: 0 0.35rem 0.2rem 0;
+  flex: none;
+}
+
+.stack-panel[open] summary::after {
+  transform: rotate(225deg);
+  margin: 0.25rem 0.35rem 0 0;
+}
+
+.stack-panel .stack {
+  padding-bottom: 0.4rem;
 }
 
 .button {
@@ -474,10 +543,51 @@ h2 {
   font-size: 0.92rem;
 }
 
+.site-footer .footer-name {
+  font-family: "Caveat", "Segoe UI", cursive;
+  font-weight: 700;
+  font-size: 1.9rem;
+  line-height: 1;
+  color: var(--fg);
+}
+
+.site-footer .footer-person {
+  margin-top: 0.25rem;
+  color: var(--fg);
+}
+
+.site-footer .footer-copy {
+  margin-top: 0.2rem;
+}
+
 @media (max-width: 52rem) {
   main.home {
     grid-template-columns: 1fr;
     row-gap: 2.25rem;
+  }
+}
+
+@media (max-width: 42rem) {
+  .site-header {
+    flex-wrap: wrap;
+    row-gap: 0.15rem;
+  }
+
+  .brand {
+    font-size: 1.85rem;
+  }
+
+  .header-tools {
+    flex: 1 1 100%;
+    justify-content: flex-end;
+  }
+
+  nav a {
+    font-size: 1.35rem;
+  }
+
+  nav ul {
+    gap: 0.35rem 0.85rem;
   }
 }
 

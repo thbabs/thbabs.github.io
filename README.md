@@ -1,6 +1,6 @@
 # thbabs.github.io
 
-Portfolio for Toluwase Babalola (Tolu), a techpreneur in Hull, UK.
+Portfolio for Tolu Babs (Toluwase Babalola), a techpreneur.
 
 GitHub Pages serves these static files from the root of `main` at <https://thbabs.github.io>. There is no build step.
 
@@ -24,9 +24,9 @@ The newsletter posts in `blog/index.html` are copied by hand from the Substack R
 
 The subscribe button points at <https://tryworkwithai.substack.com/subscribe>.
 
-## Contact address
+## YouTube
 
-The public email address lives in one place: `SITE_EMAIL` at the top of `site.js`. The envelope icon and the address on the About page both read it from there.
+The YouTube icon reads `SITE_YOUTUBE` in `site.js`, currently `https://www.youtube.com/@thbabs_yt`. Change that constant to update the icon.
 
 ## Publish
 
