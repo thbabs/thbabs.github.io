@@ -314,17 +314,6 @@ h2 {
   filter: invert(1);
 }
 
-.product:has(.logo-wordmark) {
-  grid-template-columns: 11rem 1fr;
-}
-
-.logo.logo-wordmark {
-  width: 11rem;
-  height: 2.75rem;
-  object-fit: contain;
-  padding: 0.35rem 0.45rem;
-}
-
 .stack-panel {
   margin-top: 1.75rem;
   border-top: 1px solid var(--line);
