@@ -41,7 +41,15 @@
     <header class="site-header">
       <a class="brand" href="/">Tolu Babs</a>
       <div class="header-tools">
-        <nav aria-label="Primary">
+        <button type="button" class="menu-toggle" id="menu-toggle" aria-expanded="false" aria-controls="site-menu" aria-label="Open menu">
+          <svg class="icon-open" viewBox="0 0 24 24" aria-hidden="true">
+            <path fill="currentColor" d="M4 7h16v2H4V7zm0 4h16v2H4v-2zm0 4h16v2H4v-2z"/>
+          </svg>
+          <svg class="icon-close" viewBox="0 0 24 24" aria-hidden="true">
+            <path fill="currentColor" d="M6.4 5 12 10.6 17.6 5 19 6.4 13.4 12 19 17.6 17.6 19 12 13.4 6.4 19 5 17.6 10.6 12 5 6.4z"/>
+          </svg>
+        </button>
+        <nav id="site-menu" aria-label="Primary">
           <ul>
             <li><a href="/about/">About me</a></li>
             <li><a href="/blog/" aria-current="page">Blog</a></li>
@@ -138,9 +146,7 @@
       </ul>
     </main>
     <footer class="site-footer">
-      <p class="footer-name">Tolu Babs</p>
-      <p class="footer-person">Toluwase Babalola</p>
-      <p class="footer-copy">© @thbabs 2026</p>
+      <p>© tolubabs 2026</p>
     </footer>
     <script src="/site.js"></script>
     <script src="/theme.js"></script>

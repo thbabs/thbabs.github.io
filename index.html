@@ -63,7 +63,15 @@
     <header class="site-header">
       <a class="brand" href="/" aria-current="page">Tolu Babs</a>
       <div class="header-tools">
-        <nav aria-label="Primary">
+        <button type="button" class="menu-toggle" id="menu-toggle" aria-expanded="false" aria-controls="site-menu" aria-label="Open menu">
+          <svg class="icon-open" viewBox="0 0 24 24" aria-hidden="true">
+            <path fill="currentColor" d="M4 7h16v2H4V7zm0 4h16v2H4v-2zm0 4h16v2H4v-2z"/>
+          </svg>
+          <svg class="icon-close" viewBox="0 0 24 24" aria-hidden="true">
+            <path fill="currentColor" d="M6.4 5 12 10.6 17.6 5 19 6.4 13.4 12 19 17.6 17.6 19 12 13.4 6.4 19 5 17.6 10.6 12 5 6.4z"/>
+          </svg>
+        </button>
+        <nav id="site-menu" aria-label="Primary">
           <ul>
             <li><a href="/about/">About me</a></li>
             <li><a href="/blog/">Blog</a></li>
@@ -84,8 +92,8 @@
     <main id="content" class="home">
       <div class="profile">
         <img class="avatar" src="/avatar.png" width="112" height="112" alt="Tolu Babs">
-        <h1>Techpreneur. Data scientist and AI developer.</h1>
-        <p>I build Multivrs, KontinueAI and ServiceOS.</p>
+        <h1>Techpreneur.</h1>
+        <p>I build Multivrs, KontinueAI and ServiceOS, and run Solverdeck, a web and AI agency.</p>
         <h2 id="find-heading">Find me</h2>
         <ul class="socials" aria-labelledby="find-heading">
           <li>
@@ -114,7 +122,10 @@
             </a>
           </li>
         </ul>
-        <a class="button" href="https://tryworkwithai.substack.com/subscribe">Subscribe</a>
+        <div class="actions">
+          <a class="button" href="https://tryworkwithai.substack.com/subscribe">Subscribe</a>
+          <a class="button button-secondary" href="mailto:tolubabs@solverdeck.com">Contact</a>
+        </div>
       </div>
 
       <div class="home-main">
@@ -158,6 +169,36 @@
           </ul>
         </section>
 
+        <section aria-labelledby="latest-heading">
+          <h2 id="latest-heading">Latest posts</h2>
+          <ul class="products latest">
+            <li class="product">
+              <div>
+                <h3><a href="https://tryworkwithai.substack.com/p/stop-explaining-yourself-every-time">Stop Explaining Yourself Every Time</a></h3>
+                <p><time datetime="2026-10-13">13 October 2026</time></p>
+              </div>
+            </li>
+            <li class="product">
+              <div>
+                <h3><a href="https://tryworkwithai.substack.com/p/how-to-summarise-a-pdf-with-chatgpt">The Document You Never Opened</a></h3>
+                <p><time datetime="2026-10-06">6 October 2026</time></p>
+              </div>
+            </li>
+            <li class="product">
+              <div>
+                <h3><a href="https://tryworkwithai.substack.com/p/the-second-brain">The Second Brain</a></h3>
+                <p><time datetime="2026-10-02">2 October 2026</time></p>
+              </div>
+            </li>
+            <li class="product">
+              <div>
+                <h3><a href="https://towardsdatascience.com/detecting-malicious-urls-using-lstm-and-googles-bert-models/">Detecting Malicious URLs Using LSTM and Google’s BERT Models</a></h3>
+                <p>Towards Data Science · <time datetime="2025-05-28">28 May 2025</time></p>
+              </div>
+            </li>
+          </ul>
+        </section>
+
         <details class="stack-panel">
           <summary>Stack</summary>
           <ul class="stack">
@@ -178,9 +219,7 @@
       </div>
     </main>
     <footer class="site-footer">
-      <p class="footer-name">Tolu Babs</p>
-      <p class="footer-person">Toluwase Babalola</p>
-      <p class="footer-copy">© @thbabs 2026</p>
+      <p>© tolubabs 2026</p>
     </footer>
     <script src="/site.js"></script>
     <script src="/theme.js"></script>
