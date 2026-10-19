@@ -3,44 +3,67 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Page not found — Toluwase Babalola</title>
-    <meta name="description" content="This page is not on Toluwase Babalola’s site.">
+    <title>Page not found — Tolu Babs</title>
+    <meta name="description" content="This page is not on Tolu Babs’s site.">
     <meta name="robots" content="noindex">
     <meta name="color-scheme" content="light dark">
-    <meta name="theme-color" content="#f6f3ec" media="(prefers-color-scheme: light)">
-    <meta name="theme-color" content="#12110f" media="(prefers-color-scheme: dark)">
-    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#0a0a0a" media="(prefers-color-scheme: dark)">
     <link rel="icon" href="/favicon-32.png" type="image/png" sizes="32x32">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <script>
+      (function () {
+        try {
+          var stored = localStorage.getItem("theme");
+          var theme = stored === "light" || stored === "dark"
+            ? stored
+            : (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+          document.documentElement.setAttribute("data-theme", theme);
+        } catch (error) {}
+      })();
+    </script>
     <link rel="stylesheet" href="/styles.css">
   </head>
   <body>
     <a class="skip-link" href="#content">Skip to content</a>
     <header class="site-header">
-      <a class="wordmark" href="/">
-        <span aria-hidden="true">TB</span>
-        <span class="visually-hidden">Toluwase Babalola, home</span>
-      </a>
-      <nav aria-label="Sections">
-        <ul>
-          <li><a href="/#products">Products</a></li>
-          <li><a href="/#projects">Projects</a></li>
-          <li><a href="/#articles">Articles</a></li>
-          <li><a href="/#skills">Skills</a></li>
-          <li><a href="/#experience">Experience</a></li>
-          <li><a href="/#contact">Contact</a></li>
-        </ul>
-      </nav>
+      <a class="brand" href="/">Tolu Babs</a>
+      <div class="header-tools">
+        <button type="button" class="menu-toggle" id="menu-toggle" aria-expanded="false" aria-controls="site-menu" aria-label="Open menu">
+          <svg class="icon-open" viewBox="0 0 24 24" aria-hidden="true">
+            <path fill="currentColor" d="M4 7h16v2H4V7zm0 4h16v2H4v-2zm0 4h16v2H4v-2z"/>
+          </svg>
+          <svg class="icon-close" viewBox="0 0 24 24" aria-hidden="true">
+            <path fill="currentColor" d="M6.4 5 12 10.6 17.6 5 19 6.4 13.4 12 19 17.6 17.6 19 12 13.4 6.4 19 5 17.6 10.6 12 5 6.4z"/>
+          </svg>
+        </button>
+        <nav id="site-menu" aria-label="Primary">
+          <ul>
+            <li><a href="/about/">About me</a></li>
+            <li><a href="/blog/">Blog</a></li>
+          </ul>
+        </nav>
+        <button type="button" class="theme-toggle" id="theme-toggle" aria-label="Switch colour theme">
+          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="3.25"/>
+            <path d="M12 3.5v2.1M12 18.4v2.1M3.5 12h2.1M18.4 12h2.1M5.8 5.8l1.5 1.5M16.7 16.7l1.5 1.5M18.2 5.8l-1.5 1.5M7.3 16.7l-1.5 1.5"/>
+          </svg>
+          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M20 14.2A7.2 7.2 0 0 1 9.8 4 6.2 6.2 0 1 0 20 14.2z"/>
+          </svg>
+        </button>
+      </div>
     </header>
     <main id="content">
-      <section class="hero" aria-labelledby="missing-heading">
-        <p class="kicker">404</p>
-        <h1 id="missing-heading">Page not found</h1>
-        <p>That address is not on this site.</p>
-        <p><a href="/">Back to the homepage</a></p>
-      </section>
+      <p class="meta">404</p>
+      <h1>Page not found</h1>
+      <p>That address is not on this site.</p>
+      <p><a href="/">Back to the homepage</a></p>
     </main>
     <footer class="site-footer">
-      <p>Toluwase Babalola · Hull, UK</p>
+      <p>© tolubabs 2026</p>
     </footer>
+    <script src="/site.js"></script>
+    <script src="/theme.js"></script>
   </body>
 </html>

@@ -3,299 +3,204 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Toluwase Babalola — Data scientist and AI developer</title>
-    <meta name="description" content="Toluwase Babalola (Tolu), a data scientist and AI developer in Hull, UK. Building Multivrs, KontinueAI and ServiceOS.">
+    <title>Tolu Babs — Techpreneur</title>
+    <meta name="description" content="Tolu Babs, a techpreneur. Building Multivrs, KontinueAI and ServiceOS.">
     <meta name="author" content="Toluwase Babalola">
     <meta name="color-scheme" content="light dark">
-    <meta name="theme-color" content="#f6f3ec" media="(prefers-color-scheme: light)">
-    <meta name="theme-color" content="#12110f" media="(prefers-color-scheme: dark)">
+    <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#0a0a0a" media="(prefers-color-scheme: dark)">
     <link rel="canonical" href="https://thbabs.github.io/">
-    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
     <link rel="icon" href="/favicon-32.png" type="image/png" sizes="32x32">
     <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-    <meta property="og:title" content="Toluwase Babalola — Data scientist and AI developer">
-    <meta property="og:description" content="Toluwase Babalola (Tolu), a data scientist and AI developer in Hull, UK. Building Multivrs, KontinueAI and ServiceOS.">
+    <meta property="og:title" content="Tolu Babs — Techpreneur">
+    <meta property="og:description" content="Tolu Babs, a techpreneur. Building Multivrs, KontinueAI and ServiceOS.">
     <meta property="og:url" content="https://thbabs.github.io/">
     <meta property="og:type" content="website">
     <meta property="og:locale" content="en_GB">
     <meta property="og:image" content="https://thbabs.github.io/og.png">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
-    <meta property="og:image:alt" content="Toluwase Babalola, data scientist and AI developer, Hull, UK.">
+    <meta property="og:image:alt" content="Tolu Babs, techpreneur.">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Toluwase Babalola — Data scientist and AI developer">
-    <meta name="twitter:description" content="Toluwase Babalola (Tolu), a data scientist and AI developer in Hull, UK. Building Multivrs, KontinueAI and ServiceOS.">
+    <meta name="twitter:title" content="Tolu Babs — Techpreneur">
+    <meta name="twitter:description" content="Tolu Babs, a techpreneur. Building Multivrs, KontinueAI and ServiceOS.">
     <meta name="twitter:image" content="https://thbabs.github.io/og.png">
+    <script>
+      (function () {
+        try {
+          var stored = localStorage.getItem("theme");
+          var theme = stored === "light" || stored === "dark"
+            ? stored
+            : (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+          document.documentElement.setAttribute("data-theme", theme);
+        } catch (error) {}
+      })();
+    </script>
     <link rel="stylesheet" href="/styles.css">
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
         "@type": "Person",
         "name": "Toluwase Babalola",
-        "alternateName": "Tolu",
-        "jobTitle": ["Data Scientist", "AI Developer"],
+        "alternateName": "Tolu Babs",
+        "description": "Techpreneur",
         "url": "https://thbabs.github.io/",
-        "homeLocation": {
-          "@type": "Place",
-          "address": {
-            "@type": "PostalAddress",
-            "addressLocality": "Hull",
-            "addressCountry": "GB"
-          }
-        },
+        "image": "https://thbabs.github.io/avatar.png",
         "sameAs": [
           "https://github.com/thbabs",
           "https://www.linkedin.com/in/toluwasebabalola",
           "https://x.com/iamtolux",
+          "https://tryworkwithai.substack.com/",
           "https://multivrs.space/",
-          "https://kontinueai.com/"
+          "https://kontinueai.com/",
+          "https://www.solverdeck.com/"
         ]
       }
     </script>
   </head>
-  <body id="top">
+  <body>
     <a class="skip-link" href="#content">Skip to content</a>
     <header class="site-header">
-      <a class="wordmark" href="#top">
-        <span aria-hidden="true">TB</span>
-        <span class="visually-hidden">Toluwase Babalola, back to top</span>
-      </a>
-      <nav aria-label="Sections">
-        <ul>
-          <li><a href="#products">Products</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#articles">Articles</a></li>
-          <li><a href="#skills">Skills</a></li>
-          <li><a href="#experience">Experience</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
+      <a class="brand" href="/" aria-current="page">Tolu Babs</a>
+      <div class="header-tools">
+        <button type="button" class="menu-toggle" id="menu-toggle" aria-expanded="false" aria-controls="site-menu" aria-label="Open menu">
+          <svg class="icon-open" viewBox="0 0 24 24" aria-hidden="true">
+            <path fill="currentColor" d="M4 7h16v2H4V7zm0 4h16v2H4v-2zm0 4h16v2H4v-2z"/>
+          </svg>
+          <svg class="icon-close" viewBox="0 0 24 24" aria-hidden="true">
+            <path fill="currentColor" d="M6.4 5 12 10.6 17.6 5 19 6.4 13.4 12 19 17.6 17.6 19 12 13.4 6.4 19 5 17.6 10.6 12 5 6.4z"/>
+          </svg>
+        </button>
+        <nav id="site-menu" aria-label="Primary">
+          <ul>
+            <li><a href="/about/">About me</a></li>
+            <li><a href="/blog/">Blog</a></li>
+          </ul>
+        </nav>
+        <button type="button" class="theme-toggle" id="theme-toggle" aria-label="Switch colour theme">
+          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="3.25"/>
+            <path d="M12 3.5v2.1M12 18.4v2.1M3.5 12h2.1M18.4 12h2.1M5.8 5.8l1.5 1.5M16.7 16.7l1.5 1.5M18.2 5.8l-1.5 1.5M7.3 16.7l-1.5 1.5"/>
+          </svg>
+          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M20 14.2A7.2 7.2 0 0 1 9.8 4 6.2 6.2 0 1 0 20 14.2z"/>
+          </svg>
+        </button>
+      </div>
     </header>
-    <main id="content">
-      <section class="hero" aria-labelledby="intro-heading">
-        <p class="kicker">Hull, UK.</p>
-        <h1 id="intro-heading">Toluwase Babalola</h1>
-        <p class="headline">Data scientist and AI developer.</p>
-        <p>
-          I have spent more than five years building and deploying machine learning
-          systems, large language model applications and AI-powered APIs, from
-          prototype to production. I use Python and SQL on AWS and GCP.
-        </p>
-        <ul class="links">
-          <li><a rel="me" href="https://github.com/thbabs">GitHub</a></li>
-          <li><a rel="me" href="https://www.linkedin.com/in/toluwasebabalola">LinkedIn</a></li>
-          <li><a rel="me" href="https://x.com/iamtolux">X</a></li>
-        </ul>
-      </section>
-
-      <section id="products" aria-labelledby="products-heading">
-        <h2 id="products-heading">Products</h2>
-        <div class="stack">
-          <article>
-            <h3><a href="https://multivrs.space/">Multivrs</a></h3>
-            <p class="meta">multivrs.space</p>
-            <p>
-              A serverless edge deployment platform. Connect a repository and it
-              detects the framework, builds the project, optimises assets, and
-              serves them on a global edge network, with custom domains and email.
-            </p>
-          </article>
-          <article>
-            <h3><a href="https://kontinueai.com/">KontinueAI</a></h3>
-            <p class="meta">kontinueai.com</p>
-            <p>
-              A multi-model AI workspace. Use K-AI 1.0 or switch between models
-              from OpenAI, Anthropic, Google, xAI and others, and continue an
-              imported conversation with its context kept.
-            </p>
-          </article>
-          <article>
-            <h3>ServiceOS</h3>
-            <p>A second brain for growing businesses, in progress.</p>
-          </article>
-        </div>
-      </section>
-
-      <section id="projects" aria-labelledby="projects-heading">
-        <h2 id="projects-heading">Selected projects</h2>
-        <ul class="project-list">
+    <main id="content" class="home">
+      <div class="profile">
+        <img class="avatar" src="/avatar.png" width="112" height="112" alt="Tolu Babs">
+        <h1>Techpreneur.</h1>
+        <p>I build simple products that help people and businesses get more done with less, and I write about <a href="https://tryworkwithai.substack.com/" target="_blank" rel="noopener">working with AI</a>.</p>
+        <h2 id="find-heading">Find me</h2>
+        <ul class="socials" aria-labelledby="find-heading">
           <li>
-            <a href="https://github.com/thbabs/Detecting-Malicious-URLs-using-Google-s-BERT-and-LSTM-models">Malicious URL detection</a>
-            <span>LSTM and pretrained BERT on 522,214 rows.</span>
+            <a rel="me noopener noreferrer" href="https://www.linkedin.com/in/toluwasebabalola" target="_blank" aria-label="LinkedIn">
+              <img src="/assets/icons/linkedin.svg" width="22" height="22" alt="">
+            </a>
           </li>
           <li>
-            <a href="https://github.com/thbabs/UK-CENSUS---Predicting-development-and-Investment">UK census</a>
-            <span>Town census analysis for development and investment.</span>
+            <a rel="me noopener noreferrer" href="https://tryworkwithai.substack.com/" target="_blank" aria-label="Substack">
+              <img src="/assets/icons/substack.svg" width="22" height="22" alt="">
+            </a>
           </li>
           <li>
-            <a href="https://github.com/thbabs/gdp-dashboard">GDP dashboard</a>
-            <span>Streamlit view of GDP by country, 1960 to 2022.</span>
+            <a rel="me noopener noreferrer" href="https://x.com/iamtolux" target="_blank" aria-label="X">
+              <img class="icon-x" src="/assets/icons/x.svg" width="22" height="22" alt="">
+            </a>
           </li>
           <li>
-            <a href="https://github.com/thbabs/SportBot">SportBot</a>
-            <span>Streamlit chatbot using OpenAI’s GPT-3.5 Turbo.</span>
+            <a rel="me noopener noreferrer" href="https://github.com/thbabs" target="_blank" aria-label="GitHub">
+              <img class="icon-github" src="/assets/icons/github.svg" width="22" height="22" alt="">
+            </a>
           </li>
           <li>
-            <a href="https://github.com/thbabs/Climate-Change-RAG">Climate-Change-RAG</a>
-            <span>RAG over climate papers with ChromaDB and Gemini.</span>
+            <a data-youtube rel="me noopener noreferrer" href="https://www.youtube.com/@thbabs_yt" target="_blank" aria-label="YouTube">
+              <img src="/assets/icons/youtube.svg" width="22" height="22" alt="">
+            </a>
           </li>
         </ul>
-      </section>
-
-      <section id="articles" aria-labelledby="articles-heading">
-        <h2 id="articles-heading">Articles</h2>
-        <div class="stack">
-          <article>
-            <h3>
-              <a href="https://towardsdatascience.com/detecting-malicious-urls-using-lstm-and-googles-bert-models/">Detecting Malicious URLs Using LSTM and Google’s BERT Models</a>
-            </h3>
-            <p class="meta">Towards Data Science · 28 May 2025</p>
-            <p>Compares LSTM and Google’s BERT for malicious webpage detection.</p>
-          </article>
-          <article>
-            <h3><a href="https://www.solverdeck.com/blog">Solverdeck blog</a></h3>
-            <p>
-              Practical writing on software, AI and building products, from the
-              Solverdeck team.
-            </p>
-          </article>
+        <div class="actions">
+          <a class="button" href="https://tryworkwithai.substack.com/subscribe">Subscribe</a>
+          <a class="button button-secondary" href="mailto:tolubabs@solverdeck.com">Contact</a>
         </div>
-      </section>
+      </div>
 
-      <section id="skills" aria-labelledby="skills-heading">
-        <h2 id="skills-heading">Skills</h2>
-        <dl class="skills">
-          <div>
-            <dt>Programming</dt>
-            <dd>Python (PyTorch, Keras, TensorFlow), SQL, R, Go, JavaScript, FastAPI, Flask, Next.js, React</dd>
-          </div>
-          <div>
-            <dt>Machine learning and AI</dt>
-            <dd>LLMs, generative AI, RAG, AI agents, prompt engineering, LangChain, Hugging Face Transformers, scikit-learn, XGBoost, MLflow</dd>
-          </div>
-          <div>
-            <dt>Data and vector stores</dt>
-            <dd>SQL Server, BigQuery, Snowflake, NoSQL, ETL, Pinecone, ChromaDB, Weaviate</dd>
-          </div>
-          <div>
-            <dt>Deployment</dt>
-            <dd>Docker, GCP, AWS, Oracle OCI, ONNX, Vercel, REST APIs, model optimisation and inference</dd>
-          </div>
-          <div>
-            <dt>Visualisation</dt>
-            <dd>Power BI, Streamlit, Tableau, Excel</dd>
-          </div>
-          <div>
-            <dt>Practice</dt>
-            <dd>Experimental design, performance benchmarking, Git, GitHub, Jira, Agile</dd>
-          </div>
-        </dl>
-      </section>
+      <div class="home-main">
+        <section aria-labelledby="company-heading">
+          <h2 id="company-heading">Company</h2>
+          <ul class="products">
+            <li class="product">
+              <img class="logo" src="/assets/logos/solverdeck.png" width="44" height="44" alt="">
+              <div>
+                <h3><a href="https://www.solverdeck.com/">Solverdeck</a></h3>
+                <p>Web and AI agency.</p>
+              </div>
+            </li>
+          </ul>
+        </section>
 
-      <section id="experience" aria-labelledby="experience-heading">
-        <h2 id="experience-heading">Experience</h2>
-        <div class="stack">
-          <article>
-            <div class="role-top">
-              <h3>AI Developer, <a href="https://www.solverdeck.com/">Solverdeck</a></h3>
-              <p class="when"><time datetime="2025-04">Apr 2025</time> – Present · United Kingdom</p>
-            </div>
-            <p>
-              Built and deployed more than eight custom AI applications for SME
-              clients, cutting manual workflows by an average of 30%. Managed
-              end-to-end ML pipelines from dataset preparation to production.
-            </p>
-            <p class="tech">Python, FastAPI, LangChain, OpenAI API, Anthropic Claude API, Docker, TensorFlow, PyTorch, SQL, Node.js, REST APIs</p>
-          </article>
-          <article>
-            <div class="role-top">
-              <h3>Information Analyst, Department for Work and Pensions</h3>
-              <p class="when"><time datetime="2024-07">Jul 2024</time> – <time datetime="2025-03">Mar 2025</time> · United Kingdom</p>
-            </div>
-            <p>
-              Led review of more than 200 claimant-data cases a month, and built
-              automated reporting that cut daily briefing preparation by 20 minutes
-              per manager.
-            </p>
-            <p class="tech">Python, SQL, Power BI, Excel</p>
-          </article>
-          <article>
-            <div class="role-top">
-              <h3>Data Scientist, Outlier (AI Trainer)</h3>
-              <p class="when"><time datetime="2023-09">Sep 2023</time> – <time datetime="2024-07">Jul 2024</time> · United States</p>
-            </div>
-            <p>
-              Developed time-series forecasting models on environmental datasets
-              for regional flood-risk programmes, and benchmarked five ML
-              architectures against a shared set of metrics.
-            </p>
-            <p class="tech">Python, R, scikit-learn, TensorFlow, Keras, XGBoost, pandas, NumPy, Matplotlib, Seaborn, MLflow</p>
-          </article>
-          <article>
-            <div class="role-top">
-              <h3>Data Scientist, Olamax Associate</h3>
-              <p class="when"><time datetime="2021-06">Jun 2021</time> – <time datetime="2023-08">Aug 2023</time> · Nigeria</p>
-            </div>
-            <p>
-              Designed and deployed more than 50 software automations and
-              intelligent workflows across product and operations teams.
-            </p>
-            <p class="tech">Python, JavaScript, scikit-learn, TensorFlow, SQL, REST APIs</p>
-          </article>
-          <article>
-            <div class="role-top">
-              <h3>Data Analyst, ExecuJet Aviation</h3>
-              <p class="when"><time datetime="2019-10">Oct 2019</time> – <time datetime="2021-07">Jul 2021</time> · Nigeria</p>
-            </div>
-            <p>
-              Developed post-flight inspection automation and predictive
-              maintenance from flight-data-recorder telemetry, and built automated
-              reporting for post-flight records.
-            </p>
-            <p class="tech">Python, SQL, Excel, MATLAB</p>
-          </article>
-          <article>
-            <h3>Education</h3>
-            <ul class="plain">
-              <li>MSc, Data Science and Artificial Intelligence, University of Hull, UK, <time datetime="2024-01">Jan 2024</time></li>
-              <li>BEng, Aeronautical and Astronautical Engineering, Kwara State University, Nigeria, <time datetime="2019-06">Jun 2019</time></li>
-            </ul>
-          </article>
-          <article>
-            <h3>Certifications and courses</h3>
-            <ul class="plain">
-              <li>Oracle Cloud Infrastructure: Certified Generative AI Professional</li>
-              <li>Oracle Cloud Infrastructure: Certified AI Associate</li>
-              <li>Anthropic: Building with Claude API &amp; MCP</li>
-              <li>Anthropic: Claude code in action</li>
-              <li>Think Secure: Security and Data Protection</li>
-              <li>Public Sector Equality Duty</li>
-              <li>Information Governance and PCI</li>
-            </ul>
-          </article>
-          <article>
-            <h3>Memberships</h3>
-            <ul class="plain">
-              <li>Associate, British Computer Society (The Chartered Institute for IT), <time datetime="2025-11">Nov 2025</time></li>
-              <li>Member, Society of Artificial Intelligence, IAENG, Hong Kong, <time datetime="2022-01">Jan 2022</time></li>
-              <li>Contributor, Python Software Foundation, <time datetime="2021-03">Mar 2021</time></li>
-            </ul>
-          </article>
-        </div>
-      </section>
+        <section id="products" aria-labelledby="products-heading">
+          <h2 id="products-heading">Products</h2>
+          <ul class="products">
+            <li class="product">
+              <img class="logo" src="/assets/logos/multivrs.png" width="44" height="44" alt="">
+              <div>
+                <h3><a href="https://multivrs.space/">Multivrs</a></h3>
+                <p>The all-in-one platform to build, launch, and run your business.</p>
+              </div>
+            </li>
+            <li class="product">
+              <img class="logo" src="/assets/logos/kontinueai.png" width="44" height="44" alt="">
+              <div>
+                <h3><a href="https://kontinueai.com/">KontinueAI</a></h3>
+                <p>One workspace for every AI model, with your chats carried over.</p>
+              </div>
+            </li>
+            <li class="product product-plain">
+              <div>
+                <h3>ServiceOS</h3>
+                <p>A second brain for growing businesses, in progress.</p>
+              </div>
+            </li>
+          </ul>
+        </section>
 
-      <section id="contact" aria-labelledby="contact-heading">
-        <h2 id="contact-heading">Contact</h2>
-        <p>Hull, UK.</p>
-        <ul class="links">
-          <li><a rel="me" href="https://github.com/thbabs">GitHub</a></li>
-          <li><a rel="me" href="https://www.linkedin.com/in/toluwasebabalola">LinkedIn</a></li>
-          <li><a rel="me" href="https://x.com/iamtolux">X</a></li>
-        </ul>
-      </section>
+        <section aria-labelledby="latest-heading">
+          <h2 id="latest-heading">Latest posts</h2>
+          <ul class="products latest">
+            <li class="product">
+              <h3><a href="https://tryworkwithai.substack.com/p/stop-explaining-yourself-every-time">Stop Explaining Yourself Every Time</a></h3>
+            </li>
+            <li class="product">
+              <h3><a href="https://tryworkwithai.substack.com/p/how-to-summarise-a-pdf-with-chatgpt">The Document You Never Opened</a></h3>
+            </li>
+            <li class="product">
+              <h3><a href="https://tryworkwithai.substack.com/p/the-second-brain">The Second Brain</a></h3>
+            </li>
+            <li class="product">
+              <h3><a href="https://towardsdatascience.com/detecting-malicious-urls-using-lstm-and-googles-bert-models/">Detecting Malicious URLs Using LSTM and Google’s BERT Models</a></h3>
+            </li>
+          </ul>
+        </section>
+
+        <section class="newsletter" aria-labelledby="newsletter-heading">
+          <h2 id="newsletter-heading">Newsletter</h2>
+          <p>I write about working with AI.</p>
+          <form class="newsletter-form" action="https://tryworkwithai.substack.com/subscribe" method="get" target="_blank" rel="noopener noreferrer">
+            <label class="sr-only" for="newsletter-email">Email</label>
+            <input id="newsletter-email" name="email" type="email" required autocomplete="email" inputmode="email" placeholder="Email address">
+            <button class="button" type="submit">Subscribe</button>
+          </form>
+        </section>
+
+      </div>
     </main>
     <footer class="site-footer">
-      <p>Toluwase Babalola · Hull, UK</p>
+      <p>© tolubabs 2026</p>
     </footer>
+    <script src="/site.js"></script>
+    <script src="/theme.js"></script>
   </body>
 </html>
