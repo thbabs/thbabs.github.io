@@ -197,6 +197,7 @@ nav a {
 nav a[aria-current="page"] {
   color: var(--fg);
   text-decoration: underline;
+  text-decoration-thickness: 2px;
   text-underline-offset: 0.28em;
 }
 
@@ -262,12 +263,20 @@ main {
   animation: rise 0.45s ease both;
 }
 
-main.home {
+main.home,
+main.page {
   width: min(68rem, calc(100% - 3rem));
+}
+
+main.home {
   display: grid;
   grid-template-columns: minmax(16rem, 22rem) minmax(0, 1fr);
   column-gap: 4.5rem;
   align-items: start;
+}
+
+main.page > * {
+  max-width: 40rem;
 }
 
 @keyframes rise {
@@ -474,6 +483,10 @@ h2 {
   color: var(--muted);
 }
 
+.product p + p {
+  margin-top: 0.55rem;
+}
+
 .logo {
   width: 2.75rem;
   height: 2.75rem;
@@ -498,12 +511,11 @@ h2 {
 }
 
 .posts li {
-  padding: 0.85rem 0;
-  border-top: 1px solid var(--line);
+  padding: 0.95rem 0;
 }
 
-.posts li:last-child {
-  border-bottom: 1px solid var(--line);
+.posts li + li {
+  border-top: 1px solid var(--line);
 }
 
 .posts h3 {
