@@ -375,6 +375,49 @@ h2 {
   background: transparent;
 }
 
+.highlights ul {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.7rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.highlights li {
+  max-width: 100%;
+  min-width: 0;
+}
+
+.highlights a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 100%;
+  min-height: 3.4rem;
+  padding: 0.4rem 0.7rem;
+  background: #fff;
+  border: 1px solid #e5e5e5;
+  border-radius: 0.65rem;
+  text-decoration: none;
+}
+
+.highlights img {
+  height: auto;
+  width: auto;
+  max-height: 40px;
+  max-width: 100%;
+  display: block;
+  filter: grayscale(1);
+  transition: filter 0.18s ease;
+}
+
+.highlights a:hover img,
+.highlights a:focus-visible img {
+  filter: none;
+}
+
 .stack-panel {
   margin-top: 1.75rem;
   border-top: 1px solid var(--line);
