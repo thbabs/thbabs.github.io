@@ -24,6 +24,10 @@ The newsletter posts in `blog/index.html` are copied by hand from the Substack R
 
 The subscribe button points at <https://tryworkwithai.substack.com/subscribe>.
 
+## Contact address
+
+The public email address lives in one place: `SITE_EMAIL` at the top of `site.js`. The envelope icon and the address on the About page both read it from there.
+
 ## Publish
 
 Pages is already set to deploy from `main` at `/ (root)`. Merging to `main` updates the live site on the next build.

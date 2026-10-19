@@ -97,17 +97,27 @@ a:hover {
   z-index: 5;
   display: flex;
   align-items: center;
-  gap: 0.75rem 1.1rem;
-  padding: 0.85rem 1.25rem;
+  justify-content: space-between;
+  gap: 0.75rem 1.25rem;
+  width: min(68rem, calc(100% - 3rem));
+  margin: 0 auto;
+  padding: 1.15rem 0;
   background: color-mix(in srgb, var(--bg) 92%, transparent);
-  border-bottom: 1px solid var(--line);
 }
 
 .brand {
   font-weight: 700;
   letter-spacing: -0.03em;
   text-decoration: none;
-  font-size: 1.05rem;
+  font-size: 1.2rem;
+  color: var(--fg);
+}
+
+.header-tools {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem 1.15rem;
+  margin-left: auto;
 }
 
 nav ul {
@@ -136,7 +146,6 @@ nav a:hover {
 }
 
 .theme-toggle {
-  margin-left: auto;
   width: 2.4rem;
   height: 2.4rem;
   border-radius: 999px;
@@ -174,10 +183,18 @@ nav a:hover {
 }
 
 main {
-  width: min(40rem, calc(100% - 2.5rem));
+  width: min(40rem, calc(100% - 3rem));
   margin: 0 auto;
-  padding: 2.75rem 0 4rem;
+  padding: 2.25rem 0 4rem;
   animation: rise 0.45s ease both;
+}
+
+main.home {
+  width: min(68rem, calc(100% - 3rem));
+  display: grid;
+  grid-template-columns: minmax(16rem, 22rem) minmax(0, 1fr);
+  column-gap: 4.5rem;
+  align-items: start;
 }
 
 @keyframes rise {
@@ -214,20 +231,30 @@ h2 {
   font-size: 1.12rem;
 }
 
-.intro {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 1.25rem;
+.profile h1 {
+  margin: 1rem 0 0.35rem;
+  font-size: 1.05rem;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1.5;
 }
 
-.intro p:last-child {
-  margin-bottom: 0;
+.profile p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.profile h2 {
+  margin-top: 1.5rem;
+}
+
+.home-main > section:first-child h2 {
+  margin-top: 0.15rem;
 }
 
 .avatar {
-  width: 5.5rem;
-  height: 5.5rem;
+  width: 7rem;
+  height: 7rem;
   border-radius: 50%;
   object-fit: cover;
   flex: none;
@@ -247,23 +274,26 @@ h2 {
 .socials {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.6rem 1.1rem;
+  gap: 0.15rem;
   list-style: none;
-  margin: 0.4rem 0 0;
+  margin: 0.15rem 0 0;
   padding: 0;
 }
 
 .socials a {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.45rem;
+  display: grid;
+  place-items: center;
+  width: 2.75rem;
+  height: 2.75rem;
   text-decoration: none;
-  font-weight: 600;
+  color: var(--fg);
+  border-radius: 999px;
 }
 
-.socials img {
-  width: 1.25rem;
-  height: 1.25rem;
+.socials img,
+.icon-mail {
+  width: 1.35rem;
+  height: 1.35rem;
 }
 
 :root[data-theme="dark"] .icon-x {
@@ -434,20 +464,20 @@ h2 {
 
 .site-footer {
   border-top: 1px solid var(--line);
-  padding: 1rem 1.25rem 1.5rem;
+  padding: 1.15rem 0 1.75rem;
 }
 
 .site-footer p {
-  width: min(40rem, 100%);
+  width: min(68rem, calc(100% - 3rem));
   margin: 0 auto;
   color: var(--muted);
   font-size: 0.92rem;
 }
 
-@media (max-width: 36rem) {
-  .intro {
-    flex-direction: column-reverse;
-    align-items: flex-start;
+@media (max-width: 52rem) {
+  main.home {
+    grid-template-columns: 1fr;
+    row-gap: 2.25rem;
   }
 }
 

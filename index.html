@@ -46,7 +46,6 @@
         "description": "Techpreneur",
         "url": "https://thbabs.github.io/",
         "image": "https://thbabs.github.io/avatar.png",
-        "email": "tolubabs4@outlook.com",
         "homeLocation": {
           "@type": "Place",
           "address": {
@@ -70,59 +69,59 @@
   <body>
     <a class="skip-link" href="#content">Skip to content</a>
     <header class="site-header">
-      <a class="brand" href="/">Tolu</a>
-      <nav aria-label="Primary">
-        <ul>
-          <li><a href="/" aria-current="page">Home</a></li>
-          <li><a href="/about/">About</a></li>
-          <li><a href="/blog/">Blog</a></li>
-        </ul>
-      </nav>
-      <button type="button" class="theme-toggle" id="theme-toggle" aria-label="Switch colour theme">
-        <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true">
-          <path fill="currentColor" d="M21 14.5A8.5 8.5 0 0 1 9.5 3a7 7 0 1 0 11.5 11.5z"/>
-        </svg>
-        <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true">
-          <circle cx="12" cy="12" r="4" fill="currentColor"/>
-          <path fill="currentColor" d="M11 2h2v3h-2zm0 17h2v3h-2zM2 11h3v2H2zm17 0h3v2h-3zM4.2 5.6l1.4-1.4 2.1 2.1-1.4 1.4zm12.1 12.1 1.4-1.4 2.1 2.1-1.4 1.4zM5.6 19.8l-1.4-1.4 2.1-2.1 1.4 1.4zm12.1-12.1 1.4 1.4-2.1 2.1-1.4-1.4z"/>
-        </svg>
-      </button>
+      <a class="brand" href="/" aria-current="page">Tolu Babs</a>
+      <div class="header-tools">
+        <nav aria-label="Primary">
+          <ul>
+            <li><a href="/about/">About</a></li>
+            <li><a href="/blog/">Blog</a></li>
+          </ul>
+        </nav>
+        <button type="button" class="theme-toggle" id="theme-toggle" aria-label="Switch colour theme">
+          <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true">
+            <path fill="currentColor" d="M21 14.5A8.5 8.5 0 0 1 9.5 3a7 7 0 1 0 11.5 11.5z"/>
+          </svg>
+          <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true">
+            <circle cx="12" cy="12" r="4" fill="currentColor"/>
+            <path fill="currentColor" d="M11 2h2v3h-2zm0 17h2v3h-2zM2 11h3v2H2zm17 0h3v2h-3zM4.2 5.6l1.4-1.4 2.1 2.1-1.4 1.4zm12.1 12.1 1.4-1.4 2.1 2.1-1.4 1.4zM5.6 19.8l-1.4-1.4 2.1-2.1 1.4 1.4zm12.1-12.1 1.4 1.4-2.1 2.1-1.4-1.4z"/>
+          </svg>
+        </button>
+      </div>
     </header>
-    <main id="content">
-      <section class="intro" aria-labelledby="intro-heading">
-        <div>
-          <h1 id="intro-heading">Toluwase Babalola</h1>
-          <p class="lede">Techpreneur. Data scientist and AI developer in Hull.</p>
-          <p>I build Multivrs, KontinueAI and ServiceOS.</p>
-        </div>
-        <img class="avatar" src="/avatar.png" width="88" height="88" alt="Toluwase Babalola">
-      </section>
-
-      <section aria-labelledby="find-heading">
+    <main id="content" class="home">
+      <div class="profile">
+        <img class="avatar" src="/avatar.png" width="112" height="112" alt="Toluwase Babalola">
+        <h1>Techpreneur. Data scientist and AI developer in Hull.</h1>
+        <p>I build Multivrs, KontinueAI and ServiceOS.</p>
         <h2 id="find-heading">Find me</h2>
-        <ul class="socials">
+        <ul class="socials" aria-labelledby="find-heading">
           <li>
-            <a rel="me" href="https://www.linkedin.com/in/toluwasebabalola">
-              <img src="/assets/icons/linkedin.svg" width="20" height="20" alt="">
-              LinkedIn
+            <a rel="me" href="https://www.linkedin.com/in/toluwasebabalola" aria-label="LinkedIn">
+              <img src="/assets/icons/linkedin.svg" width="22" height="22" alt="">
             </a>
           </li>
           <li>
-            <a rel="me" href="https://tryworkwithai.substack.com/">
-              <img src="/assets/icons/substack.svg" width="20" height="20" alt="">
-              Substack
+            <a rel="me" href="https://tryworkwithai.substack.com/" aria-label="Substack">
+              <img src="/assets/icons/substack.svg" width="22" height="22" alt="">
             </a>
           </li>
           <li>
-            <a rel="me" href="https://x.com/iamtolux">
-              <img class="icon-x" src="/assets/icons/x.svg" width="20" height="20" alt="">
-              X
+            <a rel="me" href="https://x.com/iamtolux" aria-label="X">
+              <img class="icon-x" src="/assets/icons/x.svg" width="22" height="22" alt="">
+            </a>
+          </li>
+          <li>
+            <a href="/#email" data-email rel="me" aria-label="Email">
+              <svg class="icon-mail" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
+                <path fill="currentColor" d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/>
+              </svg>
             </a>
           </li>
         </ul>
         <a class="button" href="https://tryworkwithai.substack.com/subscribe">Subscribe</a>
-      </section>
+      </div>
 
+      <div class="home-main">
       <section aria-labelledby="products-heading">
         <h2 id="products-heading">Products</h2>
         <ul class="products">
@@ -167,10 +166,12 @@
       </section>
 
       <p class="github-line"><a href="https://github.com/thbabs">Code on GitHub</a></p>
+      </div>
     </main>
     <footer class="site-footer">
-      <p>Toluwase Babalola · Hull, UK</p>
+      <p>Tolu Babs © 2026</p>
     </footer>
+    <script src="/site.js"></script>
     <script src="/theme.js"></script>
   </body>
 </html>
