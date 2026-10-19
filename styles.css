@@ -207,6 +207,50 @@ section {
   margin-top: 0;
 }
 
+#products {
+  margin-top: 3.75rem;
+}
+
+#products h3 {
+  font-family: Georgia, "Iowan Old Style", "Palatino Linotype", Palatino, serif;
+  font-size: 1.55rem;
+  font-weight: 500;
+}
+
+#products .stack > * + * {
+  margin-top: 1.6rem;
+  padding-top: 1.6rem;
+}
+
+.project-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.project-list li {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.15rem 0.75rem;
+  align-items: baseline;
+  padding: 0.55rem 0;
+  border-top: 1px solid var(--line);
+}
+
+.project-list li:last-child {
+  border-bottom: 1px solid var(--line);
+}
+
+.project-list a {
+  color: var(--ink);
+  font-weight: 600;
+  text-decoration-thickness: 1px;
+}
+
+.project-list span {
+  color: var(--muted);
+}
+
 /* Let the last section scroll clear of the sticky header. */
 #contact {
   min-height: calc(100svh - 9.5rem);
