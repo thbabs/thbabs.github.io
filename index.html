@@ -75,7 +75,6 @@
           <ul>
             <li><a href="/about/">About me</a></li>
             <li><a href="/blog/">Blog</a></li>
-            <li><a href="/products/">Products</a></li>
           </ul>
         </nav>
         <button type="button" class="theme-toggle" id="theme-toggle" aria-label="Switch colour theme">
@@ -189,7 +188,11 @@
         <section class="newsletter" aria-labelledby="newsletter-heading">
           <h2 id="newsletter-heading">Newsletter</h2>
           <p>I write about working with AI.</p>
-          <p class="newsletter-action"><a class="button" href="https://tryworkwithai.substack.com/subscribe" target="_blank" rel="noopener noreferrer">Subscribe</a></p>
+          <form class="newsletter-form" action="https://tryworkwithai.substack.com/subscribe" method="get" target="_blank" rel="noopener noreferrer">
+            <label class="sr-only" for="newsletter-email">Email</label>
+            <input id="newsletter-email" name="email" type="email" required autocomplete="email" inputmode="email" placeholder="Email address">
+            <button class="button" type="submit">Subscribe</button>
+          </form>
         </section>
 
       </div>

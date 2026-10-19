@@ -7,6 +7,9 @@
   --line: #e5e5e5;
   --soft: #f5f5f5;
   --link: #2563eb;
+  /* Substack publication accent, from --color_theme_accent. */
+  --accent: #0f766e;
+  --mark: color-mix(in srgb, var(--accent) 45%, #fff);
   color-scheme: light;
 }
 
@@ -18,6 +21,8 @@
     --line: #ffffff1a;
     --soft: #171717;
     --link: #60a5fa;
+    --accent: #0f766e;
+    --mark: var(--accent);
     color-scheme: dark;
   }
 }
@@ -29,6 +34,8 @@
   --line: #ffffff1a;
   --soft: #171717;
   --link: #60a5fa;
+  --accent: #0f766e;
+  --mark: var(--accent);
   color-scheme: dark;
 }
 
@@ -39,6 +46,8 @@
   --line: #e5e5e5;
   --soft: #f5f5f5;
   --link: #2563eb;
+  --accent: #0f766e;
+  --mark: color-mix(in srgb, var(--accent) 45%, #fff);
   color-scheme: light;
 }
 
@@ -196,9 +205,7 @@ nav a {
 
 nav a[aria-current="page"] {
   color: var(--fg);
-  text-decoration: underline;
-  text-decoration-thickness: 2px;
-  text-underline-offset: 0.28em;
+  text-decoration: none;
 }
 
 .theme-toggle {
@@ -348,15 +355,46 @@ h2 {
   flex: none;
 }
 
+main.about {
+  width: min(40rem, calc(100% - 3rem));
+}
+
 .about-head {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  gap: 1rem;
-  margin-bottom: 1rem;
+  gap: 0.85rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.about-head .avatar {
+  width: 4.5rem;
+  height: 4.5rem;
 }
 
 .about-head h1 {
   margin: 0;
+}
+
+.mark,
+nav a[aria-current="page"] {
+  position: relative;
+  isolation: isolate;
+}
+
+.mark::before,
+nav a[aria-current="page"]::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: -0.14em;
+  right: -0.14em;
+  top: 0.18em;
+  bottom: 0.08em;
+  background: var(--mark);
+  transform: rotate(-2deg) skewX(-8deg);
+  border-radius: 0.12em;
 }
 
 .socials {
@@ -394,12 +432,45 @@ h2 {
   color: var(--muted);
 }
 
-.newsletter-action {
+.newsletter-form {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
   margin-top: 0.85rem;
 }
 
-.newsletter-action .button {
+.newsletter-form input {
+  flex: 1;
+  min-width: 0;
+  font: inherit;
+  color: var(--fg);
+  background: var(--bg);
+  border: 1px solid color-mix(in srgb, var(--fg) 28%, transparent);
+  border-radius: 999px;
+  padding: 0.55rem 0.95rem;
+}
+
+.newsletter-form input::placeholder {
+  color: var(--muted);
+}
+
+.newsletter-form .button {
   margin-top: 0;
+  cursor: pointer;
+  font: inherit;
+  font-weight: 700;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
 }
 
 .actions {
@@ -589,6 +660,11 @@ h2 {
 
   #site-menu a {
     font-size: 1.15rem;
+  }
+
+  .newsletter-form {
+    flex-direction: column;
+    align-items: stretch;
   }
 }
 

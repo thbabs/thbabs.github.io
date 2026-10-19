@@ -12,7 +12,7 @@ From the repository root:
 python -m http.server
 ```
 
-Open <http://127.0.0.1:8000>. Pages: `/`, `/about/`, `/blog/`, `/products/`. Unknown paths use `404.html` on GitHub Pages.
+Open <http://127.0.0.1:8000>. Pages: `/`, `/about/`, `/blog/`. Unknown paths use `404.html` on GitHub Pages.
 
 ## Update the blog list
 

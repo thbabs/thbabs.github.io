@@ -53,7 +53,6 @@
           <ul>
             <li><a href="/about/">About me</a></li>
             <li><a href="/blog/" aria-current="page">Blog</a></li>
-            <li><a href="/products/">Products</a></li>
           </ul>
         </nav>
         <button type="button" class="theme-toggle" id="theme-toggle" aria-label="Switch colour theme">
@@ -69,8 +68,11 @@
     </header>
     <main id="content" class="page">
       <h1>Blog</h1>
-      <p class="lede">New to AI? Learn one simple thing you can use today. Plain English, twice a week.</p>
-      <p class="newsletter-action"><a class="button" href="https://tryworkwithai.substack.com/subscribe" target="_blank" rel="noopener noreferrer">Subscribe</a></p>
+      <form class="newsletter-form" action="https://tryworkwithai.substack.com/subscribe" method="get" target="_blank" rel="noopener noreferrer">
+        <label class="sr-only" for="newsletter-email">Email</label>
+        <input id="newsletter-email" name="email" type="email" required autocomplete="email" inputmode="email" placeholder="Email address">
+        <button class="button" type="submit">Subscribe</button>
+      </form>
 
       <h2>2026</h2>
       <ul class="posts">
