@@ -194,9 +194,8 @@ nav a:hover {
 .theme-toggle {
   width: 2.4rem;
   height: 2.4rem;
-  border-radius: 999px;
-  border: 1px solid var(--line);
-  background: var(--bg);
+  border: 0;
+  background: transparent;
   color: var(--fg);
   display: grid;
   place-items: center;
@@ -204,9 +203,13 @@ nav a:hover {
   padding: 0;
 }
 
+.theme-toggle:hover {
+  opacity: 0.65;
+}
+
 .theme-toggle svg {
-  width: 1.15rem;
-  height: 1.15rem;
+  width: 1.35rem;
+  height: 1.35rem;
 }
 
 :root[data-theme="light"] .icon-sun,
@@ -362,7 +365,7 @@ h2 {
   font-weight: 700;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  font-size: 0.78rem;
+  font-size: 1rem;
   color: var(--muted);
   list-style: none;
 }
@@ -449,6 +452,10 @@ h2 {
   grid-template-columns: 1fr;
 }
 
+.product-plain > div {
+  grid-column: 2;
+}
+
 .product:hover {
   transform: translateY(-2px);
 }
@@ -468,25 +475,12 @@ h2 {
   color: var(--muted);
 }
 
-.logo,
-.monogram {
+.logo {
   width: 2.75rem;
   height: 2.75rem;
   border-radius: 0.65rem;
-}
-
-.logo {
   object-fit: cover;
   background: #fff;
-}
-
-.monogram {
-  display: grid;
-  place-items: center;
-  border: 1px solid var(--line);
-  font-size: 0.82rem;
-  font-weight: 700;
-  letter-spacing: 0.02em;
 }
 
 .stack {
@@ -528,10 +522,6 @@ h2 {
   font-weight: 700;
   letter-spacing: -0.04em;
   color: #0a0a0a;
-}
-
-.github-line {
-  margin: 2rem 0 0;
 }
 
 .links {
@@ -583,7 +573,7 @@ h2 {
   width: min(68rem, calc(100% - 3rem));
   margin: 0 auto;
   color: var(--muted);
-  font-size: 0.92rem;
+  font-size: 1.08rem;
 }
 
 @media (max-width: 52rem) {
@@ -628,7 +618,7 @@ h2 {
   }
 
   #site-menu a {
-    font-size: 1.75rem;
+    font-size: 1.15rem;
   }
 }
 
@@ -643,9 +633,7 @@ h2 {
 
 @media (forced-colors: active) {
   .button,
-  .theme-toggle,
-  .chip,
-  .monogram {
+  .chip {
     border: 1px solid ButtonText;
   }
 }
